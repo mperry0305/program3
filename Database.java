@@ -11,15 +11,38 @@ public class Database {
             srcIn = new Scanner(System.in);
         
         String
+            currRegNum,
             regNumber,
             mapName,
             string;
 
         Integer
             numIn,
-            numOut;
+            numOut,
+            currCount;
+           
+
+        Boolean
+            moreInfo,
+            noMoreInfo;
+
+    Scanner
+        inFile,
+        stdin = new Scanner(System.in);
 
 
+
+    herdBook = new HashMap<String,Integer>();
+        
+    moreInfo = true;
+    while(stdin.hasNext() && moreInfo){
+        currRegNum = stdin.next();
+        
+        if(currRegNum==null)
+            return;
+        else(herdBook.containsKey(currRegNum))
+            System.out.println(currRegNum);
+            
     }
 
 
@@ -46,67 +69,21 @@ public void printPedigree(){
         dtrs,
         rcrds,
         aveMilk,
-        avePer
+        avePer,
         aveBF,
         exImp;
     
     System.out.println("Data for the animal");
-    System.out.println("Registration Number: " + 'regNum');
-    System.out.println("Name: " + 'name');
-    System.out.println("Born: " + 'born');
-    System.out.println("Classification" + 'classific');
-    System.out.println("Proof Date: " + 'proof');
-    System.out.println("Dtrs = " + 'dtrs' + " Records = " + 'rcrds');
-    System.out.println("AveMilk = " + 'aveMilk' + " Ave% = " + 'avePer' + "AveBf = " + 'aveBF' + " ExImp = " + 'exImp');
+    System.out.println("Registration Number: " + regNum);
+    System.out.println("Name: " + name);
+    System.out.println("Born: " + born);
+    System.out.println("Classification" + classific);
+    System.out.println("Proof Date: " + proof);
+    System.out.println("Dtrs = " + dtrs + " Records = " + rcrds);
+    System.out.println("AveMilk = " + aveMilk + " Ave% = " + avePer + "AveBf = " + aveBF + " ExImp = " + exImp);
 
 
 //return outString;
 }
 
-public static void main(String[] args){
-
-    Boolean
-        moreInfo,
-        noMoreInfo;
-
-    Integer 
-        currCount;
-
-    String
-        currRegNum,
-        string;
-
-
-    HashMap hB;
-
-    Scanner
-        inFile,
-        stdin = new Scanner(System.in);
-
-
-
-    herdBook = new HashMap<String,Integer>();
-        
-    moreInfo = true;
-    while(stdin.hasNext() && moreInfo){
-        currRegNum = stdin.next();
-        
-        boolean empty;
-        
-        if(currRegNum==null){
-            empty = true;
-            break;
-        }
-            ;
-        else(herdBook.containsKey(currRegNum))
-            System.out.println(currRegNum);
-        
-            
-        
-    }
-    
-        //herdBook.printPedigree();
-        
-        
-}
 }
